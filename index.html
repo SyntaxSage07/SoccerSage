@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="SoccerSage - Your ultimate football match prediction tool. Get accurate predictions for upcoming matches and stay ahead of the game.">
+  <meta name="keywords" content="football, soccer, prediction, app, matches, sports, betting, scores">
+  <meta name="author" content="Adewale Wahab">
+  <meta property="og:title" content="SoccerSage - Football Match Prediction Website">
+  <meta property="og:description"
+    content="Get accurate predictions for upcoming football matches with SoccerSage. Stay ahead of the game with our advanced prediction algorithms.">
+  <meta property="og:image" content="https://scontent-lhr6-2.xx.fbcdn.net/v/t39.30808-6/438159493_122161385714056885_6213199529236092407_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEki7A3WoDHVZamIp1tMjjq02gQsCK3DS_TaBCwIrcNL4c2VmaiWxHVQMq8tsXsuYdcjNrXFRGfuwTx9C5DNEn6&_nc_ohc=5lF-PzgJCH4Q7kNvgHGWwIa&_nc_zt=23&_nc_ht=scontent-lhr6-2.xx&oh=00_AYDyXaxfyocq10WMHKHzqt-8NAweJ8JMtSK__tLxAr4EqQ&oe=664A88C6">
+  <meta property="og:url" content="url_to_your_app_website">
+  <meta name="twitter:card" content="Get accurate predictions for upcoming football matches with SoccerSage. Stay ahead of the game with our advanced prediction algorithms.">
+  <meta name="twitter:title" content="SoccerSage - Football Match Prediction Website">
+  <meta name="twitter:description"
+    content="Get accurate predictions for upcoming football matches with SoccerSage. Stay ahead of the game with our advanced prediction algorithms.">
+  <meta name="twitter:image" content="https://scontent-lhr6-2.xx.fbcdn.net/v/t39.30808-6/438159493_122161385714056885_6213199529236092407_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEki7A3WoDHVZamIp1tMjjq02gQsCK3DS_TaBCwIrcNL4c2VmaiWxHVQMq8tsXsuYdcjNrXFRGfuwTx9C5DNEn6&_nc_ohc=5lF-PzgJCH4Q7kNvgHGWwIa&_nc_zt=23&_nc_ht=scontent-lhr6-2.xx&oh=00_AYDyXaxfyocq10WMHKHzqt-8NAweJ8JMtSK__tLxAr4EqQ&oe=664A88C6">
+  <link rel="shortcut icon" href="https://scontent-lhr6-2.xx.fbcdn.net/v/t39.30808-6/438159493_122161385714056885_6213199529236092407_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEki7A3WoDHVZamIp1tMjjq02gQsCK3DS_TaBCwIrcNL4c2VmaiWxHVQMq8tsXsuYdcjNrXFRGfuwTx9C5DNEn6&_nc_ohc=5lF-PzgJCH4Q7kNvgHGWwIa&_nc_zt=23&_nc_ht=scontent-lhr6-2.xx&oh=00_AYDyXaxfyocq10WMHKHzqt-8NAweJ8JMtSK__tLxAr4EqQ&oe=664A88C6" type="image/x-icon">
+  <title>SoccerSage - Football Match Prediction Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      /* Added margin for top, right, bottom, and left */
+      padding: 0;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    .container {
+      width: calc(100% - 20px);
+      /* Adjusted width to consider the margins */
+      max-width: 1280px;
+      min-width: 375px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 2px solid #007bff;
+      border-radius: 10px;
+      background-color: #fff;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      border-radius: 8px 8px 0 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .navigation-buttons button {
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .navigation-buttons button:hover {
+      background-color: #0056b3;
+    }
+
+    .green-mark {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: green;
+      border-radius: 50%;
+      margin-left: 5px;
+    }
+
+    .Red-mark {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: rgb(255, 0, 0);
+      border-radius: 50%;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>SoccerSage</h1>
+    </header>
+    <main>
+      <div class="section predictions">
+        <h2 style="text-align: center; text-transform: uppercase;">Predictions</h2>
+        <div class="prediction-list">
+          <table style="margin: 0 auto; border-collapse: collapse; border: 1px solid black;">
+            <thead>
+              <tr>
+                <th style="padding: 10px; border: 1px solid black;">League</th>
+                <th style="padding: 10px; border: 1px solid black;">Time</th>
+                <th style="padding: 10px; border: 1px solid black;">Prediction</th>
+                <th style="padding: 10px; border: 1px solid black;">Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="prediction">
+                <td style="padding: 10px; border: 1px solid black;">Premier League</td>
+                <td style="padding: 10px; border: 1px solid black;">20:00 pm</td>
+                <td style="padding: 10px; border: 1px solid black;">Machester City - wins</td>
+                <td style="padding: 10px; border: 1px solid black;">0 - 2<span class="green-mark"></span></td>
+              </tr>
+
+              <tr class="prediction">
+                <td style="padding: 10px; border: 1px solid black;">Spain</td>
+                <td style="padding: 10px; border: 1px solid black;">8:30 pm</td>
+                <td style="padding: 10px; border: 1px solid black;">Madrid wins</td>
+                <td style="padding: 10px; border: 1px solid black;">5 - 0<span class="green-mark"></span></td>
+              </tr>
+
+              <tr class="prediction">
+                <td style="padding: 10px; border: 1px solid black;">Bahrain</td>
+                <td style="padding: 10px; border: 1px solid black;">19:00</td>
+                <td style="padding: 10px; border: 1px solid black;">Al Khalidiyah - wins</td>
+                <td style="padding: 10px; border: 1px solid black;">7 - 0<span class="green-mark"></span></td>
+              </tr>
+              <!-- Repeat the above rows for each game prediction -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <section class="section previous-predictions" style="display: none;">
+        <div class="section predictions">
+          <h2 style="text-align: center; text-transform: uppercase;">Previous Predictions</h2>
+          <div class="prediction-list">
+            <table style="margin: 0 auto; border-collapse: collapse; border: 1px solid black;">
+              <thead>
+                <tr>
+                  <th style="padding: 10px; border: 1px solid black;">S/N</th>
+                  <th style="padding: 10px; border: 1px solid black;">League</th>
+                  <th style="padding: 10px; border: 1px solid black;">Date</th>
+                  <th style="padding: 10px; border: 1px solid black;">Time</th>
+                  <th style="padding: 10px; border: 1px solid black;">Prediction</th>
+                  <th style="padding: 10px; border: 1px solid black;">Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="prediction">
+                  <td style="padding: 10px; border: 1px solid black;">1</td>
+                  <td style="padding: 10px; border: 1px solid black;">Premier League</td>
+                  <td style="padding: 10px; border: 1px solid black;">May 14, 2024</td>
+                  <td style="padding: 10px; border: 1px solid black;">20:00 pm</td>
+                  <td style="padding: 10px; border: 1px solid black;">Machester City - wins</td>
+                  <td style="padding: 10px; border: 1px solid black;">0 - 2<span class="green-mark"></span></td>
+                </tr>
+  
+                <tr class="prediction">
+                  <td style="padding: 10px; border: 1px solid black;">2</td>
+                  <td style="padding: 10px; border: 1px solid black;">Spain</td>
+                  <td style="padding: 10px; border: 1px solid black;">May 14, 2024</td>
+                  <td style="padding: 10px; border: 1px solid black;">8:30 pm</td>
+                  <td style="padding: 10px; border: 1px solid black;">Madrid wins</td>
+                  <td style="padding: 10px; border: 1px solid black;">5 - 0<span class="green-mark"></span></td>
+                </tr>
+  
+                <tr class="prediction">
+                  <td style="padding: 10px; border: 1px solid black;">3</td>
+                  <td style="padding: 10px; border: 1px solid black;">Bahrain</td>
+                  <td style="padding: 10px; border: 1px solid black;">May 14, 2024</td>
+                  <td style="padding: 10px; border: 1px solid black;">19:00</td>
+                  <td style="padding: 10px; border: 1px solid black;">Al Khalidiyah - wins</td>
+                  <td style="padding: 10px; border: 1px solid black;">7 - 0<span class="green-mark"></span></td>
+                </tr>
+                <!-- Repeat the above rows for each game prediction -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; <span id="year"></span>
+        <a href="https://github.com/SyntaxSage07" target="_blank"><i class="fab fa-github"></i> GitHub</a> ||
+        <a href="YOUR_WHATSAPP_CONTACT_LINK" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </p>
+    </footer>
+  </div>
+  <script>
+    // JavaScript to update the year in the footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+    // Button event handlers for navigation
+    const prevButton = document.getElementById("prevButton");
+    const nextButton = document.getElementById("nextButton");
+    const sections = document.querySelectorAll(".section");
+    let currentPage = 0;
+    prevButton.addEventListener("click", () => {
+      if (currentPage > 0) {
+        sections[currentPage].style.display = "none";
+        currentPage--;
+        sections[currentPage].style.display = "block";
+      }
+    });
+    nextButton.addEventListener("click", () => {
+      if (currentPage < sections.length - 1) {
+        sections[currentPage].style.display = "none";
+        currentPage++;
+        sections[currentPage].style.display = "block";
+      }
+    });
+  </script>
+</body>
+
+</html>
